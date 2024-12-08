@@ -21,7 +21,8 @@ setup(
     entry_points={
         'console_scripts': [
             'gui = serial_motor_demo.gui:main',
-            'driver = serial_motor_demo.driver:main'
+            'driver = serial_motor_demo.driver:main',
+            'cmd_vel_to_motor_command = serial_motor_demo.cmd_vel_to_motor_command:main'
         ],
     },
 )
