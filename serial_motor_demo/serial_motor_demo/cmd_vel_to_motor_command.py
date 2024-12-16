@@ -36,8 +36,8 @@ class CmdVelToMotorCommandNode(Node):
             motor_command.mot_2_req_rad_sec = linear_speed * 150
         elif linear_speed == 0 and angular_speed != 0:
             # Turning in place: Adjust motor directions for correct turning
-            motor_command.mot_1_req_rad_sec = -angular_speed * 255  # Reverse sign
-            motor_command.mot_2_req_rad_sec = angular_speed * 255   # Reverse sign
+            motor_command.mot_1_req_rad_sec = -angular_speed * 255  
+            motor_command.mot_2_req_rad_sec = angular_speed * 255 
         elif linear_speed != 0 and angular_speed != 0:
             # Curving: One motor moves faster than the other
             motor_command.mot_1_req_rad_sec = (linear_speed + angular_speed) * 150
